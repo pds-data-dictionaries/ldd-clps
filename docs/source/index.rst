@@ -14,10 +14,3 @@ Example Namespace Documentation
     :caption: User Guide
 
     user/user-guide
-
-    
-.. toctree::
-    :maxdepth: 3
-    :caption: Detailed Documentation
-
-    detailed/example
