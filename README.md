@@ -7,17 +7,16 @@
    potentially mysterious cases.
 -->
 
-# {dictionary name} ({prefix:}) {"Discipline" or "Local"} Dictionary
+# Commercial Lunar Payload Services (clps:) Mission Dictionary
 <!-- EXAMPLES
    Spectral (sp:) Discipline Dictionary
    DART Mission (dart:) Local Dictionary
 -->
 
-The {dictionary name} dictionary provides classes and attributes for
-{brief functional description}
+The Commercial Lunar Payload Services Mission dictionary (clps:) contains classes, attributes and rules specific to the CLPS missions and their instruments.
 
 ### Steward
-{steward name} ({steward GitHub handle}), {steward node}
+Jennifer Ward (@jennifergward), [PDS Geosciences Node](https://pds-geosciences.wustl.edu/)
 <!-- EXAMPLE
      Anne Raugh (@acraugh), Small Bodies Node (SBN)
 -->
@@ -26,9 +25,7 @@ The {dictionary name} dictionary provides classes and attributes for
 
 <!-- The following assumes the complete documentation set exists. If it
 does not, edit the sentence and link accordingly. -->
-The User's Guide and detailed documentation for using this dictionary in
-label design and processing
-are located at https://pds-data-dictionaries.github.io/{repo id}.
+The User's Guide for using this dictionary is located at https://pds-data-dictionaries.github.io/ldd-clps.
 <!-- EXAMPLE
      are located at https://pds-data-dictionaries.github.io/ldd-template.
 -->
@@ -55,9 +52,9 @@ are located at https://pds-data-dictionaries.github.io/{repo id}.
        * Review the [Change Log] (ChangeLog.md)
        * Review the [Change Log] (src/CHANGELOG.md)
 -->     
-* Download dictionary files from the [PDS Data Dictionaries Page](https://pds.nasa.gov/datastandards/dictionaries/#{dictionary prefix})
+* Download dictionary files from the [PDS Data Dictionaries Page](https://pds.nasa.gov/datastandards/dictionaries/#msl)
 * On [GitHub](../../releases/latest)
-* Review the [Change log]({change log file name})
+* Review the [Change log](CHANGELOG.md)
 
 # About This Repository
 <!-- The top-level directory structure and names must not change, but if
@@ -92,7 +89,7 @@ GitHub repo URL.-->
 
 There is a common place to request enhancements and report problems for
 any PDS-curated dictionary - the [PDS4 Issue Repo](https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/new/choose).
-Search for the \[{repo id}\] update request block and click the green
+Search for the \[ldd-clps\] update request block and click the green
 "Get Started" button.
 
 ## Contribute Code or documentation

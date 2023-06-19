@@ -1,0 +1,227 @@
+PDS4 Local Data Dictionary Processing Report
+
+Configuration:
+   LDDTool Version        14.2.4
+   LDD Version Id:        1.0.0.0
+   LDD Label Version Id:  1.24
+   LDD Discipline (T/F):  false
+   LDD Namespace URL:     http://pds.nasa.gov/pds4/
+   LDD URN Prefix:        urn:nasa:pds:
+   Time                   Mon Jun 19 17:40:34 UTC 2023
+   Common Schema          [PDS4_PDS_1I00.xsd]
+   Common Schematron      [PDS4_PDS_1I00.sch]
+   IM Version Id:         1.18.0.0
+   IM Namespace Id:       pds
+   IM Label Version Id:   1.24
+   IM Object Model        [UpperModel.pont]
+   IM Data Dictionary     [dd11179.pins]
+   IM Configuration File  [MDPTNConfigClassDisp.xml]
+   IM Glossary            [Glossary.pins]
+   IM Document Spec       [DMDocument.pins]
+
+Parameters:
+   Input File             [/home/runner/work/ldd-clps/ldd-clps/src/PDS4_CLPS_IngestLDD.xml]
+   PDS Processing         true
+   LDD Processing         true
+   Discipline LDD         false
+   Mission LDD            true
+   Write Attr Elements    false
+   Merge with Master      false
+
+Summary:
+   Classes                3
+   Attributes             12
+   Associations           14
+   Error messages         0
+   Warning messages       0
+   Information messages   0
+
+Detailed validation messages
+
+Parsed Input - Header:
+   LDD Name               Commercial Lunar Payload Services Mission
+   LDD Version            1.0.0.0
+   Full Name              Jennifer Ward
+   Steward                geo
+   Namespace Id           clps
+   Comment                
+    The Commercial Lunar Payload Services (CLPS) mission dictionary contains classes and attributes specific to CLPS deliveries 
+    and their instruments. 
+    
+    CLPS version 1.0.0.0 
+    PDS Build 1.19.0.0
+    LDDTool version 14.0.13
+    
+    Built with LDDTool -plJ  PDS4_CLPS_IngestLDD.xml
+     
+    2023-06-16 JGW Initial version.
+    
+  
+   Last Modification Time 2023-06-16
+   PDS4 Merge Flag        false
+
+Parsed Input - Attributes:
+
+   name                   lunar_lander_name
+   version                1.18
+   value data type        ASCII_Short_String_Preserved
+   description            lunar_lander_name identifies the name of the lunar lander.
+
+   name                   nasa_delivery_name
+   version                1.18
+   value data type        ASCII_Short_String_Collapsed
+   description            nasa_delivery_name identifies the delivery name assigned by NASA.
+
+   name                   project_scientist
+   version                1.18
+   value data type        ASCII_Short_String_Preserved
+   description            The project_scientist element identifies the name of the delivery's Project Scientist.
+
+   name                   vendor
+   version                1.18
+   value data type        ASCII_Short_String_Preserved
+   description            The vendor element identifies the company responsible for delivering the payload to the lunar surface.
+
+   name                   vendor_mission_name
+   version                1.18
+   value data type        ASCII_Short_String_Preserved
+   description            vendor_mission_name identifies the name given to the mission by the CLPS vendor.
+
+   name                   mission_phase_name
+   version                1.18
+   value data type        ASCII_Short_String_Preserved
+   description            The mission_phase_name identifies a time period within the mission.
+
+   name                   producer_institution_name
+   version                1.18
+   value data type        ASCII_Short_String_Preserved
+   description            The producer_institution_name specifies the identity of the facility or institution that produced the product.
+
+   name                   product_type
+   version                1.18
+   value data type        ASCII_Short_String_Collapsed
+   description            The product_type element identifies a group of data products within a collection that have some property in common, such as processing level, resolution, or instrument-specific setting. 
+
+   name                   release_number
+   version                1.18
+   value data type        ASCII_Short_String_Collapsed
+   description            release_number is the identifier of a scheduled release of data from PDS. The first data release has release_number "0001". The release_number for a given product is always the first release in which it appears, and does not change if the product is revised later.
+   minimum characters     4
+
+   name                   spacecraft_clock_partition
+   version                1.18
+   value data type        ASCII_Integer
+   description            The spacecraft_clock_partition provides the clock partition active for the spacecraft_clock_start and spacecraft_clock_stop attributes. This attribute may be used when the spacecraft_clock values do not include a partition number.
+   minimum value          1
+
+   name                   spacecraft_clock_start
+   version                1.18
+   value data type        ASCII_Short_String_Collapsed
+   description            The spacecraft_clock_start attribute provides the value of the spacecraft clock at the beginning of a time period of interest.
+   minimum characters     1
+   maximum characters     19
+
+   name                   spacecraft_clock_stop
+   version                1.18
+   value data type        ASCII_Short_String_Collapsed
+   description            The spacecraft_clock_stop_count attribute provides the value of the spacecraft clock at the end of a time period of interest.
+   minimum characters     1
+   maximum characters     19
+
+Parsed Input - Classes:
+
+   name                   CLPS_Delivery_Information
+   description            The CLPS_Delivery_Information class provides information about a CLPS delivery.
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      clps.nasa_delivery_name
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.vendor
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.vendor_mission_name
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.lunar_lander_name
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.project_scientist
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   CLPS_Observation_Information
+   description            The CLPS_Observation_Information class provides information about a science observation.
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      clps.release_number
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.product_type
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.mission_phase_name
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.spacecraft_clock_start
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.spacecraft_clock_stop
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.spacecraft_clock_partition
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.producer_institution_name
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   CLPS_Parameters
+   description            The CLPS_Parameters class is a superclass containing all CLPS mission classes.
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      clps.CLPS_Delivery_Information
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      clps.CLPS_Observation_Information
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+End of Report
