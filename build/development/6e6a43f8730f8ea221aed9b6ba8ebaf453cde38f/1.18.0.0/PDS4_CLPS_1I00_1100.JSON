@@ -3,8 +3,8 @@
     "dataDictionary": {
       "Title": "PDS4 Data Dictionary" ,
       "IM Version": "1.18.0.0" ,
-      "LDD Version": "1.0.0.0" ,
-      "Date": "2023-06-19T17:40:34Z" ,
+      "LDD Version": "1.1.0.0" ,
+      "Date": "2023-06-29T15:56:06Z" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "namespaces": ["pds:", "clps:"] ,
       "classDictionary": [
@@ -271,6 +271,149 @@
                 "classOrder": "1020" ,
                 "classId": [
                   "0001_NASA_PDS_1.clps.CLPS_Observation_Information"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.clps.CLPS_Parameters.clps.NIRVSS_Parameters" ,
+                "title": "NIRVSS_Parameters" ,
+                "assocType": "component_of" ,
+                "isAttribute": "false" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1030" ,
+                "classId": [
+                  "0001_NASA_PDS_1.clps.NIRVSS_Parameters"
+                 ]
+              }
+            }
+           ]
+          }
+        }
+      , {
+          "class": {
+            "identifier": "0001_NASA_PDS_1.clps.NIRVSS_Parameters" ,
+            "title": "NIRVSS_Parameters" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "clps" ,
+            "steward": "geo" ,
+            "versionId": "1.0.0.0" ,
+            "isAbstract": "false" ,
+            "isDeprecated": "false" ,
+            "description": "The NIRVSS_Parameters class provides metadata specific to NIRVSS observations."
+              , "associationList": [
+             {"association": {
+                "identifier": "0001_NASA_PDS_1.clps.NIRVSS_Parameters.clps.nirvss_aim_xscale" ,
+                "title": "nirvss_aim_xscale" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1010" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.clps.NIRVSS_Parameters.clps.nirvss_aim_xscale"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.clps.NIRVSS_Parameters.clps.nirvss_aim_yscale" ,
+                "title": "nirvss_aim_yscale" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1020" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.clps.NIRVSS_Parameters.clps.nirvss_aim_yscale"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.clps.NIRVSS_Parameters.clps.nirvss_aim_xstart" ,
+                "title": "nirvss_aim_xstart" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1030" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.clps.NIRVSS_Parameters.clps.nirvss_aim_xstart"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.clps.NIRVSS_Parameters.clps.nirvss_aim_xend" ,
+                "title": "nirvss_aim_xend" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1040" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.clps.NIRVSS_Parameters.clps.nirvss_aim_xend"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.clps.NIRVSS_Parameters.clps.nirvss_aim_ystart" ,
+                "title": "nirvss_aim_ystart" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1050" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.clps.NIRVSS_Parameters.clps.nirvss_aim_ystart"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.clps.NIRVSS_Parameters.clps.nirvss_aim_yend" ,
+                "title": "nirvss_aim_yend" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1060" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.clps.NIRVSS_Parameters.clps.nirvss_aim_yend"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.clps.NIRVSS_Parameters.clps.nirvss_led_illumination_duration" ,
+                "title": "nirvss_led_illumination_duration" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1070" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.clps.NIRVSS_Parameters.clps.nirvss_led_illumination_duration"
                  ]
               }
             }
@@ -792,6 +935,181 @@
             "unitOfMeasure": "null" ,
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.clps.NIRVSS_Parameters.clps.nirvss_aim_xend" ,
+            "title": "nirvss_aim_xend" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "clps" ,
+            "steward": "geo" ,
+            "versionId": "1.18" ,
+            "description": "Pixel location of the largest value column of the sub-array. Always given in the native Scale 0. Allowable values are from 0 to 2047." ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "0" ,
+            "maximumValue": "2047" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.clps.NIRVSS_Parameters.clps.nirvss_aim_xscale" ,
+            "title": "nirvss_aim_xscale" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "clps" ,
+            "steward": "geo" ,
+            "versionId": "1.18" ,
+            "description": "Scale factor representing the number 2^N of columns that are averaged onboard by the AIM, where N is the scale factor. For each scale factor, the number of columns is decreased by 1\/(2^N) of the native number of columns (2048): for XScale = 0 the image contains the native number of columns; for XScale = 1 the image contains 1\/2 of the native number of columns; etc. Allowable values of XScale are 0, 1, 2, 3, 4." ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "0" ,
+            "maximumValue": "4" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.clps.NIRVSS_Parameters.clps.nirvss_aim_xstart" ,
+            "title": "nirvss_aim_xstart" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "clps" ,
+            "steward": "geo" ,
+            "versionId": "1.18" ,
+            "description": "Pixel location of the smallest value column of the sub-array. Always given in the native Scale 0. Allowable values are from 0 to 2047." ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "0" ,
+            "maximumValue": "2047" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.clps.NIRVSS_Parameters.clps.nirvss_aim_yend" ,
+            "title": "nirvss_aim_yend" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "clps" ,
+            "steward": "geo" ,
+            "versionId": "1.18" ,
+            "description": "Pixel location of the largest value row of the sub-array. Always given in the native Scale 0. Allowable values are from 0 to 2047." ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "0" ,
+            "maximumValue": "2047" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.clps.NIRVSS_Parameters.clps.nirvss_aim_yscale" ,
+            "title": "nirvss_aim_yscale" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "clps" ,
+            "steward": "geo" ,
+            "versionId": "1.18" ,
+            "description": "Scale factor representing the number 2^N of rows that are skipped onboard by the AIM, where N is the scale factor. For each scale factor, the number of rows is decreased by 1\/(2^N) of the native number of rows (2048) for YScale = 0 the image contains the native number of rows; for YScale = 1 the image contains 1\/2 of the native number of rows; etc. Allowable values of YScale are 0, 1, 2, 3, 4." ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "0" ,
+            "maximumValue": "4" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.clps.NIRVSS_Parameters.clps.nirvss_aim_ystart" ,
+            "title": "nirvss_aim_ystart" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "clps" ,
+            "steward": "geo" ,
+            "versionId": "1.18" ,
+            "description": "Pixel location of the smallest value row of the sub-array. Always given in the native Scale 0. Allowable values are from 0 to 2047." ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "0" ,
+            "maximumValue": "2047" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.clps.NIRVSS_Parameters.clps.nirvss_led_illumination_duration" ,
+            "title": "nirvss_led_illumination_duration" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "clps" ,
+            "steward": "geo" ,
+            "versionId": "1.18" ,
+            "description": "Time, in milliseconds, that the chosen LED is in the illuminated or on state. Typically LED illumination duration time equals the image exposure duration. However, when the image exposure duration exceeds the LED's maximum allowable exposure, the LED will turn off at the maximum allowable exposure, while the detector continues acquiring the image." ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Real" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1.7976931348623157e308" ,
+            "maximumValue": "1.7976931348623157e308" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "Units_of_Time" ,
+            "unitOfMeasureId": "0001_NASA_PDS_1.pds.Units_of_Time" ,
+            "unitId": "day, hr, julian day, microseconds, min, ms, ns, s, yr" ,
             "defaultUnitId": "null"
           }
         }

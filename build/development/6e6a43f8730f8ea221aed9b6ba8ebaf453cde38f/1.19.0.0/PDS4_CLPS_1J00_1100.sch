@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:clps  Version:1.0.0.0 - Mon Jun 19 17:40:32 UTC 2023 -->
+  <!-- PDS4 Schematron for Name Space Id:clps  Version:1.1.0.0 - Thu Jun 29 15:56:11 UTC 2023 -->
   <!-- Generated from the PDS4 Information Model Version 1.19.0.0 - System Build 13.0 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -78,6 +78,13 @@
       <sch:assert test=". = ('NSS_ENG_CAL', 'NSS_ENG_RAW', 'NSS_SCI_CAL', 'NSS_SCI_RAW')">
         <title>clps:CLPS_Observation_Information/clps:product_type/clps:product_type</title>
         The attribute clps:CLPS_Observation_Information/clps:product_type must be equal to one of the following values 'NSS_ENG_CAL', 'NSS_ENG_RAW', 'NSS_SCI_CAL', 'NSS_SCI_RAW'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="clps:NIRVSS_Parameters/clps:nirvss_led_illumination_duration">
+      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
+        <title>clps:NIRVSS_Parameters/clps:nirvss_led_illumination_duration/clps:nirvss_led_illumination_duration</title>
+        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
     </sch:rule>
   </sch:pattern>
 </sch:schema>
