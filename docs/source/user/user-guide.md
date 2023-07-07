@@ -1,5 +1,5 @@
 PDS4 Commercial Lunar Payload Services Mission Dictionary User's Guide  
-2023-06-19
+2023-07-07
 Jennifer Ward
 
 
@@ -69,6 +69,9 @@ The following is an example showing the location of the CLPS dictionary classes 
             <clps:spacecraft_clock_partition>            
             <clps:producer_institution_name>
           </clps:CLPS_Observation_Information>
+          <clps:NIRVSS_Parameters> 
+          [Defined below]
+          </clps:NIRVSS_Parameters>          
       </clps:CLPS_Parameters>
      </Mission_Area>
         ...         
@@ -86,6 +89,7 @@ See the Definitions section for complete definitions.
 - CLPS_Parameters class
     - CLPS_Delivery_Information class
     - CLPS_Observation_Information class
+    - NIRVSS_Parameters class
 
 Below are lists showing the hierarchy of class attributes in order of appearance in the PDS4 label. 
 See the Definitions section for complete definitions.
@@ -110,6 +114,15 @@ See the Definitions section for complete definitions.
 - spacecraft_clock_partition
 - producer_institution_name
 
+## NIRVSS_Parameters Class
+- nirvss_aim_xscale
+- nirvss_aim_yscale
+- nirvss_aim_xstart
+- nirvss_aim_xend
+- nirvss_aim_ystart
+- nirvss_aim_yend
+- nirvss_led_illumination_duration
+
 # Definitions
 
 Classes (in alphabetical order)
@@ -127,6 +140,11 @@ Classes (in alphabetical order)
 *CLPS_Parameters*
 - The CLPS_Parameters class is a superclass containing all CLPS mission classes.
 - Minimum occurrences: 1
+- Maximum occurrences: 1
+
+*NIRVSS_Parameters*
+- The NIRVSS_Parameters class provides metadata specific to NIRVSS observations.
+- Minimum occurrences: 0
 - Maximum occurrences: 1
 
 Attributes (in alphabetical order)
@@ -181,6 +199,73 @@ nasa_delivery_name identifies the delivery name assigned by NASA.
 - Minimum occurrences: 1
 - Maximum occurrences: 1
 - Nillable: No
+
+*nirvss_aim_xend*
+Pixel location of the largest value column of the sub-array. Always given in the native Scale 0. Allowable values are from 0 to 2047.
+- PDS4 data type: ASCII_Integer
+- Minimum occurrences: 0
+- Maximum occurrences: 1
+- Nillable: No
+- Minimum value: 0
+- Maximum value: 2047
+
+*nirvss_aim_xscale*
+Scale factor representing the number 2^N of columns that are averaged onboard by the AIM, where N is the scale factor. For each scale factor, the number of columns is 
+decreased by 1/(2^N) of the native number of columns (2048): for XScale = 0 the image contains the native number of columns; for XScale = 1 the image contains 1/2 of the 
+native number of columns; etc. Allowable values of XScale are 0, 1, 2, 3, 4.
+- PDS4 data type: ASCII_Integer
+- Minimum occurrences: 0
+- Maximum occurrences: 1
+- Nillable: No
+- Minimum value: 0
+- Maximum value: 4
+
+*nirvss_aim_xstart*
+Pixel location of the smallest value column of the sub-array. Always given in the native Scale 0. Allowable values are from 0 to 2047.
+- PDS4 data type: ASCII_Integer
+- Minimum occurrences: 0
+- Maximum occurrences: 1
+- Nillable: No
+- Minimum value: 0
+- Maximum value: 2047
+
+*nirvss_aim_yend*
+Pixel location of the largest value row of the sub-array. Always given in the native Scale 0. Allowable values are from 0 to 2047.
+- PDS4 data type: ASCII_Integer
+- Minimum occurrences: 0
+- Maximum occurrences: 1
+- Nillable: No
+- Minimum value: 0
+- Maximum value: 2047
+
+*nirvss_aim_yscale*
+Scale factor representing the number 2^N of rows that are skipped onboard by the AIM, where N is the scale factor. For each scale factor, the number of rows is decreased by 
+1/(2^N) of the native number of rows (2048) for YScale = 0 the image contains the native number of rows; for YScale = 1 the image contains 1/2 of the native number of rows; 
+etc. Allowable values of YScale are 0, 1, 2, 3, 4.
+- PDS4 data type: ASCII_Integer
+- Minimum occurrences: 0
+- Maximum occurrences: 1
+- Nillable: No
+- Minimum value: 0
+- Maximum value: 4
+
+*nirvss_aim_ystart*
+Pixel location of the smallest value row of the sub-array. Always given in the native Scale 0. Allowable values are from 0 to 2047.
+- PDS4 data type: ASCII_Integer
+- Minimum occurrences: 0
+- Maximum occurrences: 1
+- Nillable: No
+- Minimum value: 0
+- Maximum value: 2047
+
+*nirvss_led_illumination_duration*
+Time, in milliseconds, that the chosen LED is in the illuminated or on state. Typically LED illumination duration time equals the image exposure duration. However, when the 
+image exposure duration exceeds the LED's maximum allowable exposure, the LED will turn off at the maximum allowable exposure, while the detector continues acquiring the image.
+- PDS4 data type: ASCII_Real
+- Minimum occurrences: 0
+- Maximum occurrences: 1
+- Nillable: No
+- Unit of measure type: Units_of_Time
 
 *producer_institution_name*
 The producer_institution_name specifies the identity of the facility or institution that produced the product.
