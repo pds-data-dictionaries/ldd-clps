@@ -1,0 +1,53 @@
+
+>>  INFO LDDTOOL Version: 15.1.0
+>>  INFO IM Version Id: 1.20.0.0
+>>  INFO IM Namespace Id: pds
+>>  INFO IM Label Version Id: 1.26
+>>  INFO Date: Mon Jun 17 14:18:41 UTC 2024
+>>  INFO PARENT_DIR: /tmp/lddtool-15.1.0/Data/
+
+>>> INFO Init:  - Config.Properties Namespace Id Using:pds
+>>> INFO Init:  - LDD Dictionary_Type is Mission
+>>> INFO Attribute: <release_number> - The default minimum characters provided by the attribute's data type is being overridden with 4
+>>> INFO Attribute: <spacecraft_clock_partition> - The default minimum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <spacecraft_clock_start> - The default minimum characters provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <spacecraft_clock_start> - The default maximum characters provided by the attribute's data type is being overridden with 19
+>>> INFO Attribute: <spacecraft_clock_stop> - The default minimum characters provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <spacecraft_clock_stop> - The default maximum characters provided by the attribute's data type is being overridden with 19
+>>> INFO Attribute: <nirvss_aim_xend> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <nirvss_aim_xend> - The default maximum value provided by the attribute's data type is being overridden with 2047
+>>> INFO Attribute: <nirvss_aim_xscale> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <nirvss_aim_xscale> - The default maximum value provided by the attribute's data type is being overridden with 4
+>>> INFO Attribute: <nirvss_aim_xstart> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <nirvss_aim_xstart> - The default maximum value provided by the attribute's data type is being overridden with 2047
+>>> INFO Attribute: <nirvss_aim_yend> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <nirvss_aim_yend> - The default maximum value provided by the attribute's data type is being overridden with 2047
+>>> INFO Attribute: <nirvss_aim_yscale> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <nirvss_aim_yscale> - The default maximum value provided by the attribute's data type is being overridden with 4
+>>> INFO Attribute: <nirvss_aim_ystart> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <nirvss_aim_ystart> - The default maximum value provided by the attribute's data type is being overridden with 2047
+>>> WARNING Init:  - Config.Properties Namespace Id Not Found:clps
+
+ -- LDDTool Execution Summary --
+     1 warning(s)
+     0 error(s)
+     0 fatal error(s)
+
+Input:
+
+     - IM Version: 1K00
+     - PDS4 Flag: true
+     - LDD Flag: true
+     - IM Version: true
+     - Export JSON Flag: true
+
+     - Ingest LDD(s): /home/runner/work/ldd-clps/ldd-clps/src/PDS4_CLPS_IngestLDD.xml
+
+Output:
+
+     - ./PDS4_CLPS_1K00_1100.xsd
+     - ./PDS4_CLPS_1K00_1100.sch
+     - ./PDS4_CLPS_1K00_1100.xml
+     - ./export/JSON/PDS4_PDS_1K00.JSON
+
+>>  INFO Exit(0)

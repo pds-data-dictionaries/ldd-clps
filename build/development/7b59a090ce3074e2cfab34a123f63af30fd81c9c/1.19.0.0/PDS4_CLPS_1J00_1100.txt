@@ -1,0 +1,323 @@
+PDS4 Local Data Dictionary Processing Report
+
+Configuration:
+   LDDTool Version        15.1.0
+   LDD Version Id:        1.1.0.0
+   LDD Label Version Id:  1.25
+   LDD Discipline (T/F):  false
+   LDD Namespace URL:     http://pds.nasa.gov/pds4/
+   LDD URN Prefix:        urn:nasa:pds:
+   Time                   Mon Jun 17 14:18:40 UTC 2024
+   Common Schema          [PDS4_PDS_1J00.xsd]
+   Common Schematron      [PDS4_PDS_1J00.sch]
+   IM Version Id:         1.19.0.0
+   IM Namespace Id:       pds
+   IM Label Version Id:   1.25
+   IM Object Model        [UpperModel.pont]
+   IM Data Dictionary     [dd11179.pins]
+   IM Glossary            [Glossary.pins]
+   IM Document Spec       [DMDocument.pins]
+
+Parameters:
+   Input File             [/home/runner/work/ldd-clps/ldd-clps/src/PDS4_CLPS_IngestLDD.xml]
+   PDS Processing         true
+   LDD Processing         true
+   Discipline LDD         false
+   Mission LDD            true
+   Write Attr Elements    false
+   Merge with Master      false
+
+Summary:
+   Classes                4
+   Attributes             19
+   Associations           22
+   Error messages         0
+   Warning messages       0
+   Information messages   0
+
+Detailed validation messages
+
+Parsed Input - Header:
+   LDD Name               Commercial Lunar Payload Services Mission
+   LDD Version            1.1.0.0
+   Full Name              Jennifer Ward
+   Steward                geo
+   Namespace Id           clps
+   Comment                
+    The Commercial Lunar Payload Services (CLPS) mission dictionary contains classes and attributes specific to CLPS deliveries 
+    and their instruments. 
+    
+    CLPS version 1.1.0.0 
+    PDS Build 1.19.0.0
+    LDDTool version 14.0.13
+    
+    Built with LDDTool -plJ  PDS4_CLPS_IngestLDD.xml
+     
+    2023-06-16 JGW Initial version.
+    2023-06-22 JGW Added CLPS_NIRVSS_Parameters class.
+    
+  
+   Last Modification Time 2023-06-22
+   PDS4 Merge Flag        false
+
+Parsed Input - Attributes:
+
+   name                   lunar_lander_name
+   version                1.19
+   value data type        ASCII_Short_String_Preserved
+   description            lunar_lander_name identifies the name of the lunar lander.
+
+   name                   nasa_delivery_name
+   version                1.19
+   value data type        ASCII_Short_String_Collapsed
+   description            nasa_delivery_name identifies the delivery name assigned by NASA.
+
+   name                   project_scientist
+   version                1.19
+   value data type        ASCII_Short_String_Preserved
+   description            The project_scientist element identifies the name of the delivery's Project Scientist.
+
+   name                   vendor
+   version                1.19
+   value data type        ASCII_Short_String_Preserved
+   description            The vendor element identifies the company responsible for delivering the payload to the lunar surface.
+
+   name                   vendor_mission_name
+   version                1.19
+   value data type        ASCII_Short_String_Preserved
+   description            vendor_mission_name identifies the name given to the mission by the CLPS vendor.
+
+   name                   mission_phase_name
+   version                1.19
+   value data type        ASCII_Short_String_Preserved
+   description            The mission_phase_name identifies a time period within the mission.
+
+   name                   producer_institution_name
+   version                1.19
+   value data type        ASCII_Short_String_Preserved
+   description            The producer_institution_name specifies the identity of the facility or institution that produced the product.
+
+   name                   product_type
+   version                1.19
+   value data type        ASCII_Short_String_Collapsed
+   description            The product_type element identifies a group of data products within a collection that have some property in common, such as processing level, resolution, or instrument-specific setting. 
+
+   name                   release_number
+   version                1.19
+   value data type        ASCII_Short_String_Collapsed
+   description            release_number is the identifier of a scheduled release of data from PDS. The first data release has release_number "0001". The release_number for a given product is always the first release in which it appears, and does not change if the product is revised later.
+   minimum characters     4
+
+   name                   spacecraft_clock_partition
+   version                1.19
+   value data type        ASCII_Integer
+   description            The spacecraft_clock_partition provides the clock partition active for the spacecraft_clock_start and spacecraft_clock_stop attributes. This attribute may be used when the spacecraft_clock values do not include a partition number.
+   minimum value          1
+
+   name                   spacecraft_clock_start
+   version                1.19
+   value data type        ASCII_Short_String_Collapsed
+   description            The spacecraft_clock_start attribute provides the value of the spacecraft clock at the beginning of a time period of interest.
+   minimum characters     1
+   maximum characters     19
+
+   name                   spacecraft_clock_stop
+   version                1.19
+   value data type        ASCII_Short_String_Collapsed
+   description            The spacecraft_clock_stop_count attribute provides the value of the spacecraft clock at the end of a time period of interest.
+   minimum characters     1
+   maximum characters     19
+
+   name                   nirvss_aim_xend
+   version                1.19
+   value data type        ASCII_Integer
+   description            Pixel location of the largest value column of the sub-array. Always given in the native Scale 0. Allowable values are from 0 to 2047.
+   minimum value          0
+   maximum value          2047
+
+   name                   nirvss_aim_xscale
+   version                1.19
+   value data type        ASCII_Integer
+   description            Scale factor representing the number 2^N of columns that are averaged onboard by the AIM, where N is the scale factor. For each scale factor, the number of columns is decreased by 1/(2^N) of the native number of columns (2048): for XScale = 0 the image contains the native number of columns; for XScale = 1 the image contains 1/2 of the native number of columns; etc. Allowable values of XScale are 0, 1, 2, 3, 4.
+   minimum value          0
+   maximum value          4
+
+   name                   nirvss_aim_xstart
+   version                1.19
+   value data type        ASCII_Integer
+   description            Pixel location of the smallest value column of the sub-array. Always given in the native Scale 0. Allowable values are from 0 to 2047.
+   minimum value          0
+   maximum value          2047
+
+   name                   nirvss_aim_yend
+   version                1.19
+   value data type        ASCII_Integer
+   description            Pixel location of the largest value row of the sub-array. Always given in the native Scale 0. Allowable values are from 0 to 2047.
+   minimum value          0
+   maximum value          2047
+
+   name                   nirvss_aim_yscale
+   version                1.19
+   value data type        ASCII_Integer
+   description            Scale factor representing the number 2^N of rows that are skipped onboard by the AIM, where N is the scale factor. For each scale factor, the number of rows is decreased by 1/(2^N) of the native number of rows (2048) for YScale = 0 the image contains the native number of rows; for YScale = 1 the image contains 1/2 of the native number of rows; etc. Allowable values of YScale are 0, 1, 2, 3, 4.
+   minimum value          0
+   maximum value          4
+
+   name                   nirvss_aim_ystart
+   version                1.19
+   value data type        ASCII_Integer
+   description            Pixel location of the smallest value row of the sub-array. Always given in the native Scale 0. Allowable values are from 0 to 2047.
+   minimum value          0
+   maximum value          2047
+
+   name                   nirvss_led_illumination_duration
+   version                1.19
+   value data type        ASCII_Real
+   description            Time, in milliseconds, that the chosen LED is in the illuminated or on state. Typically LED illumination duration time equals the image exposure duration. However, when the image exposure duration exceeds the LED's maximum allowable exposure, the LED will turn off at the maximum allowable exposure, while the detector continues acquiring the image.
+   unit of measure type   Units_of_Time
+
+Parsed Input - Classes:
+
+   name                   CLPS_Delivery_Information
+   description            The CLPS_Delivery_Information class provides information about a CLPS delivery.
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      clps.nasa_delivery_name
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.vendor
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.vendor_mission_name
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.lunar_lander_name
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.project_scientist
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   CLPS_Observation_Information
+   description            The CLPS_Observation_Information class provides information about a science observation.
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      clps.release_number
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.product_type
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.mission_phase_name
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.spacecraft_clock_start
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.spacecraft_clock_stop
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.spacecraft_clock_partition
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.producer_institution_name
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   NIRVSS_Parameters
+   description            The NIRVSS_Parameters class provides metadata specific to NIRVSS observations.
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      clps.nirvss_aim_xscale
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.nirvss_aim_yscale
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.nirvss_aim_xstart
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.nirvss_aim_xend
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.nirvss_aim_ystart
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.nirvss_aim_yend
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clps.nirvss_led_illumination_duration
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   CLPS_Parameters
+   description            The CLPS_Parameters class is a superclass containing all CLPS mission classes.
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      clps.CLPS_Delivery_Information
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      clps.CLPS_Observation_Information
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      clps.NIRVSS_Parameters
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+End of Report
