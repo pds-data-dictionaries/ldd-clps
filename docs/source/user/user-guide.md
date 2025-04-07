@@ -1,5 +1,5 @@
 PDS4 Commercial Lunar Payload Services Mission Dictionary User's Guide  
-2023-07-07
+2025-04-07
 Jennifer Ward
 
 
@@ -179,7 +179,7 @@ The mission_phase_name identifies a time period within the mission.
           processing software development and testing, and instrument calibration. Some products generated during this phase may not be 
           a part of the final PDS archive but may be used for testing and peer review.
 - Minimum occurrences: 0
-- Maximum occurrences: 1
+- Maximum occurrences: *
 - Nillable: No
 
 *nasa_delivery_name*
@@ -356,6 +356,7 @@ vendor_mission_name identifies the name given to the mission by the CLPS vendor.
   - Intuitive Machines Mission 2 - Mission is Intuitive Machines Mission 2 (IM2).
   - Intuitive Machines Mission 3 - Mission is Intuitive Machines Mission 3 (IM3).
   - Peregrine Mission 1 - Mission is Peregrine Mission 1.
+  - Draper Lunar Lander - Mission is Draper Lunar Lander .
 - Minimum occurrences: 1
 - Maximum occurrences: 1
 - Nillable: No
