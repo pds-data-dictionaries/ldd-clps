@@ -25,7 +25,7 @@
     Built with LDDTool -plJ  PDS4_CLPS_IngestLDD.xml
      
     2023-06-16 JGW Initial version.
-    2023-06-22 JGW Added CLPS_NIRVSS_Parameters class.
+    2023-06-22 JGW Added CLPS_NIRVSS_Parameters class.  
     2025-04-07 JGW Changed mission_phase_name cardinality from 0..1 to 0..unbounded.
     
   </comment>

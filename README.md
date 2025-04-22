@@ -7,7 +7,7 @@
    potentially mysterious cases.
 -->
 
-# Commercial Lunar Payload Services (clps:) Mission Dictionary
+# Commercial Lunar Payload Services (clps:) Mission Dictionary 
 <!-- EXAMPLES
    Spectral (sp:) Discipline Dictionary
    DART Mission (dart:) Local Dictionary
